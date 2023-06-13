@@ -1,4 +1,4 @@
-#!/bin/bash
+i#!/bin/bash
 # Loads the test data from the jwave repository to the appropriate folders
 # Usage: ./get_data.sh
 
@@ -15,6 +15,7 @@ echo "Syncing data..."
 
 # Perform rsync on $JWAVE_PATH/tests/kwave_data to the kwave_data folder
 rsync -av $JWAVE_PATH/tests/kwave_data/*.mat tests/kwave_data/
+rsync -av $JWAVE_PATH/tests/regression_data/*.mat tests/regression_data/
 
 echo "Data synced."
 
